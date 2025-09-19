@@ -1,0 +1,72 @@
+version: '3.8'
+
+services:
+  # Discord Bot
+  discord-bot:
+    build: .
+    container_name: discord-server-bot
+    restart: unless-stopped
+    depends_on:
+      - mongodb
+      - redis
+    environment:
+      - NODE_ENV=production
+    env_file:
+      - .env
+    volumes:
+      - ./logs:/app/logs
+    networks:
+      - bot-network
+
+  # MongoDB Database
+  mongodb:
+    image: mongo:7
+    container_name: discord-bot-mongodb
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: password123
+      MONGO_INITDB_DATABASE: discord-server-bot
+    volumes:
+      - mongodb_data:/data/db
+      - ./init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
+    ports:
+      - "27017:27017"
+    networks:
+      - bot-network
+
+  # Redis (für Rate-Limiting)
+  redis:
+    image: redis:7-alpine
+    container_name: discord-bot-redis
+    restart: unless-stopped
+    command: redis-server --appendonly yes
+    volumes:
+      - redis_data:/data
+    ports:
+      - "6379:6379"
+    networks:
+      - bot-network
+
+  # Ollama (optional, für lokale KI)
+  ollama:
+    image: ollama/ollama:latest
+    container_name: discord-bot-ollama
+    restart: unless-stopped
+    volumes:
+      - ollama_data:/root/.ollama
+    ports:
+      - "11434:11434"
+    networks:
+      - bot-network
+    environment:
+      - OLLAMA_HOST=0.0.0.0
+
+volumes:
+  mongodb_data:
+  redis_data:
+  ollama_data:
+
+networks:
+  bot-network:
+    driver: bridge
