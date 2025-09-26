@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Discord Server Creator - Automatische Server-Erstellung mit KI</title>
+    <meta name="description" content="Revolutionärer Discord-Bot der automatisch komplette Server mit KI erstellt. Multi-Server Support, Smart Formatting, Channel-Berechtigungen und mehr!">
+    <meta name="keywords" content="Discord Bot, AI, Server Creator, Automatisch, KI, Multi-Server">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://discord-server-creator.com/">
+    <meta property="og:title" content="AI Discord Server Creator">
+    <meta property="og:description" content="Automatische Server-Erstellung mit KI-Power">
+    <meta property="og:image" content="assets/og-image.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://discord-server-creator.com/">
+    <meta property="twitter:title" content="AI Discord Server Creator">
+    <meta property="twitter:description" content="Automatische Server-Erstellung mit KI-Power">
+    <meta property="twitter:image" content="assets/og-image.png">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-robot"></i>
+                <span>ServerCreator AI</span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#how-it-works" class="nav-link">How it Works</a></li>
+                <li><a href="#stats" class="nav-link">Stats</a></li>
+                <li><a href="#docs" class="nav-link">Docs</a></li>
+                <li><a href="#invite" class="nav-link cta-btn">Invite Bot</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-sparkles"></i>
+                    <span>Powered by AI • Multi-Server Support</span>
+                </div>
+                <h1 class="hero-title">
+                    Discord Server Creation
+                    <span class="gradient-text">Revolutioniert</span>
+                </h1>
+                <p class="hero-description">
+                    Erstelle komplette Discord-Server in Sekunden mit KI-Power. 
+                    Smart Formatting, Channel-Berechtigungen, Multi-Server Support und vieles mehr.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#invite" class="btn btn-primary">
+                        <i class="fab fa-discord"></i>
+                        Bot einladen
+                    </a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/valomander/discord-server-bot" class="btn btn-secondary">
+                        <i class="fas fa-play"></i>
+                        Demo ansehen
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number" data-count="1000">0</span>
+                        <span class="stat-label">Server erstellt</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-count="50">0</span>
+                        <span class="stat-label">Aktive Server</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-count="99">0</span>
+                        <span class="stat-label">% Uptime</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="bot-animation">
+                    <div class="bot-container">
+                        <div class="bot-head">
+                            <div class="bot-eyes">
+                                <div class="eye left"></div>
+                                <div class="eye right"></div>
+                            </div>
+                            <div class="bot-mouth"></div>
+                        </div>
+                        <div class="bot-body">
+                            <div class="bot-screen">
+                                <div class="screen-content">
+                                    <div class="code-line"></div>
+                                    <div class="code-line short"></div>
+                                    <div class="code-line"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="floating-elements">
+                        <div class="float-element" style="--delay: 0s">🎮</div>
+                        <div class="float-element" style="--delay: 0.5s">💬</div>
+                        <div class="float-element" style="--delay: 1s">🔧</div>
+                        <div class="float-element" style="--delay: 1.5s">📋</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-particles" id="particles"></div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Revolutionäre Features</h2>
+                <p>Alles was Sie für professionelle Discord-Server brauchen</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="feature-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>KI-Powered Erstellung</h3>
+                    <p>Fortschrittliche KI erstellt maßgeschneiderte Server-Strukturen basierend auf Ihren Anforderungen.</p>
+                    <ul class="feature-list">
+                        <li>Ollama & OpenRouter Support</li>
+                        <li>Intelligente Template-Erkennung</li>
+                        <li>Fallback-System für 100% Uptime</li>
+                    </ul>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Smart Formatting</h3>
+                    <p>Automatische Emoji-Integration und ASCII-Strukturierung für professionelle Channel-Namen.</p>
+                    <ul class="feature-list">
+                        <li>📋 Emojis für jeden Channel-Typ</li>
+                        <li>├─ ASCII-Strukturierung</li>
+                        <li>Kreative & ansprechende Namen</li>
+                    </ul>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Permission Management</h3>
+                    <p>Granulare Channel-Berechtigungen mit privaten Staff-Bereichen und öffentlichen Community-Zonen.</p>
+                    <ul class="feature-list">
+                        <li>Private Staff-Kanäle</li>
+                        <li>Automatische Rollen-Erkennung</li>
+                        <li>Sichere Berechtigungsverteilung</li>
+                    </ul>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Multi-Server Support</h3>
+                    <p>Unbegrenzte Server-Unterstützung mit isolierten Konfigurationen und separaten Einstellungen.</p>
+                    <ul class="feature-list">
+                        <li>Unlimited Server</li>
+                        <li>Isolierte Configs</li>
+                        <li>Server-spezifische Analytics</li>
+                    </ul>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-icon">
+                        <i class="fas fa-trash-alt"></i>
+                    </div>
+                    <h3>Advanced Cleanup</h3>
+                    <p>Intelligente Löschfunktionen mit selektiver Auswahl und Sicherheits-Confirmations.</p>
+                    <ul class="feature-list">
+                        <li>Selektive Löschung</li>
+                        <li>Komplette Server-Bereinigung</li>
+                        <li>Rollback-Funktionalität</li>
+                    </ul>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Analytics & Monitoring</h3>
+                    <p>Detaillierte Statistiken, Performance-Monitoring und Multi-Server Dashboards.</p>
+                    <ul class="feature-list">
+                        <li>Real-time Statistics</li>
+                        <li>Success Rate Tracking</li>
+                        <li>Performance Metrics</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it Works Section -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2>So einfach funktioniert's</h2>
+                <p>In 4 einfachen Schritten zum perfekten Discord-Server</p>
+            </div>
+            <div class="steps-container">
+                <div class="step" data-aos="fade-right" data-aos-delay="0">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Bot einladen</h3>
+                        <p>Laden Sie den Bot auf Ihren Discord-Server ein und vergeben Sie die nötigen Berechtigungen.</p>
+                    </div>
+                    <div class="step-visual">
+                        <i class="fab fa-discord"></i>
+                    </div>
+                </div>
+                <div class="step" data-aos="fade-left" data-aos-delay="200">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Template wählen</h3>
+                        <p>Verwenden Sie <code>/create-server</code> und wählen Sie aus Gaming, Projekt, Community oder Custom.</p>
+                    </div>
+                    <div class="step-visual">
+                        <i class="fas fa-list-ul"></i>
+                    </div>
+                </div>
+                <div class="step" data-aos="fade-right" data-aos-delay="400">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>KI konfiguriert</h3>
+                        <p>Die KI analysiert Ihre Anforderungen und generiert eine maßgeschneiderte Server-Struktur.</p>
+                    </div>
+                    <div class="step-visual">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                </div>
+                <div class="step" data-aos="fade-left" data-aos-delay="600">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Server bereit!</h3>
+                        <p>Komplette Server-Struktur mit Kanälen, Rollen, Berechtigungen und Regeln in Sekunden erstellt.</p>
+                    </div>
+                    <div class="step-visual">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Commands Section -->
+    <section class="commands">
+        <div class="container">
+            <div class="section-header">
+                <h2>Verfügbare Commands</h2>
+                <p>Alle Funktionen im Überblick</p>
+            </div>
+            <div class="commands-grid">
+                <div class="command-card" data-aos="zoom-in" data-aos-delay="0">
+                    <div class="command-header">
+                        <code>/create-server</code>
+                        <span class="command-badge main">Hauptfunktion</span>
+                    </div>
+                    <p>Erstellt automatisch einen kompletten Discord-Server mit KI-Unterstützung</p>
+                    <div class="command-features">
+                        <span>Template-Auswahl</span>
+                        <span>KI-Generierung</span>
+                        <span>Vorschau-System</span>
+                    </div>
+                </div>
+                <div class="command-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="command-header">
+                        <code>/delete-all</code>
+                        <span class="command-badge danger">Admin</span>
+                    </div>
+                    <p>Löscht alle Kanäle und Rollen mit Sicherheits-Confirmations</p>
+                    <div class="command-features">
+                        <span>Safety-Checks</span>
+                        <span>Temp-Channel</span>
+                        <span>Rollback-Support</span>
+                    </div>
+                </div>
+                <div class="command-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="command-header">
+                        <code>/delete-selective</code>
+                        <span class="command-badge warning">Moderation</span>
+                    </div>
+                    <p>Gezielte Löschung bestimmter Kanäle, Kategorien oder Rollen</p>
+                    <div class="command-features">
+                        <span>Multi-Select</span>
+                        <span>Preview-System</span>
+                        <span>Smart-Filtering</span>
+                    </div>
+                </div>
+                <div class="command-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="command-header">
+                        <code>/bot-stats</code>
+                        <span class="command-badge info">Analytics</span>
+                    </div>
+                    <p>Zeigt Bot-Statistiken und Multi-Server Informationen</p>
+                    <div class="command-features">
+                        <span>Server-Stats</span>
+                        <span>Success-Rates</span>
+                        <span>Performance-Metrics</span>
+                    </div>
+                </div>
+                <div class="command-card" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="command-header">
+                        <code>/server-status</code>
+                        <span class="command-badge secondary">Info</span>
+                    </div>
+                    <p>Status der letzten Server-Erstellung und Konfigurationshistorie</p>
+                    <div class="command-features">
+                        <span>Creation-History</span>
+                        <span>Status-Tracking</span>
+                        <span>Error-Reports</span>
+                    </div>
+                </div>
+                <div class="command-card" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="command-header">
+                        <code>/help</code>
+                        <span class="command-badge secondary">Support</span>
+                    </div>
+                    <p>Umfassende Hilfe und Dokumentation aller verfügbaren Features</p>
+                    <div class="command-features">
+                        <span>Command-Guide</span>
+                        <span>Examples</span>
+                        <span>Troubleshooting</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section" id="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="stat-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-number" data-count="1247">0</h3>
+                        <p>Server erstellt</p>
+                    </div>
+                </div>
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-number" data-count="15420">0</h3>
+                        <p>Aktive Nutzer</p>
+                    </div>
+                </div>
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3><span class="stat-number" data-count="99">0</span><span class="stat-suffix">.9%</span></h3>
+                        <p>Uptime</p>
+                    </div>
+                </div>
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3><span class="stat-number" data-count="3">0</span><span class="stat-suffix">s</span></h3>
+                        <p>Avg. Erstellung</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="invite">
+        <div class="container">
+            <div class="cta-content" data-aos="zoom-in">
+                <h2>Bereit für die Zukunft?</h2>
+                <p>Laden Sie den Bot ein und erleben Sie automatische Server-Erstellung mit KI-Power!</p>
+                <div class="cta-buttons">
+                    <a href="https://discord.com/oauth2/authorize?client_id=1418317413023350836&permissions=8&integration_type=0&scope=bot" 
+                       class="btn btn-primary btn-large" target="_blank">
+                        <i class="fab fa-discord"></i>
+                        Bot zu Discord hinzufügen
+                    </a>
+                    <a href="https://github.com/valomander/discord-server-bot" class="btn btn-secondary btn-large" target="_blank">
+                        <i class="fab fa-github"></i>
+                        Auf GitHub ansehen
+                    </a>
+                </div>
+                <div class="cta-note">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>100% Open Source • Keine versteckten Kosten • EU-DSGVO konform</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-robot"></i>
+                        <span>ServerCreator AI</span>
+                    </div>
+                    <p>Revolutionäre Discord-Server Erstellung mit KI-Power.</p>
+                    <div class="social-links">
+                        <a href="#" target="_blank"><i class="fab fa-discord"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Features</h4>
+                    <ul>
+                        <li><a href="#features">KI-Integration</a></li>
+                        <li><a href="#features">Smart Formatting</a></li>
+                        <li><a href="#features">Multi-Server</a></li>
+                        <li><a href="#features">Analytics</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Ressourcen</h4>
+                    <ul>
+                        <li><a href="#docs">Dokumentation</a></li>
+                        <li><a href="#" target="_blank">GitHub</a></li>
+                        <li><a href="#commands">Commands</a></li>
+                        <li><a href="#how-it-works">Tutorial</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#" target="_blank">Discord Server</a></li>
+                        <li><a href="#" target="_blank">Bug Report</a></li>
+                        <li><a href="#" target="_blank">Feature Request</a></li>
+                        <li><a href="#" target="_blank">Kontakt</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ServerCreator AI. MIT License. Made with ❤️ by valomander</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
